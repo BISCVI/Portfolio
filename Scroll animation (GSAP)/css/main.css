@@ -1,0 +1,116 @@
+/* Сбрасываем все дефолтные стили страници */
+* {
+	margin: 0; /* Отступы */
+	padding: 0; /* Внутренние отступы */
+	box-sizing: border-box;
+}
+
+/* Создаем переменные с мопощью псевдокласса :root */
+:root {
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
+	--gallery-gap: calc(var(--index) * 10); /* горизантальное либо вертикальное расстояние */
+}
+
+/* Установка шрифтов */
+@font-face {
+	font-family: raleway-c;
+	src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+	font-family: outfit-c;
+	src: url(../fonts/outfit-regular.woff2);
+}
+
+/* Параметры всех заголовков */
+h1, h2, h3, h4, h5, h6 {
+	font-family: outfit-c; /* Выбор шрифта */
+}
+
+/* will-change управление эффектами при скроле*/
+.content, .hero, .main-header, .gallery > * {
+	will-change: transform;
+}
+
+body {
+	background-image: url(../img/bg.jpg); /* Подключение фона страници */
+	background-size: 50px; /* Размер фона */
+	color: #fafafa; /* Цвет текста */
+	font-family: raleway-c; /* Отображение шрифта на главной странице */
+	overflow: hidden-x; /* Скрываем горизонтальную прокрутку, (-x прокрутка по вертикали)*/
+
+}
+
+/* Редактируем изображение с классом "hero" */
+.hero {
+	width: calc(var(--index) * 36); /* Настраиваем размер изображения с помощью ширины */
+	position: absolute; /* Свободное позиционирование */
+	left: 37vw; /* Отступ с лева */
+	top: 8vh; /* Отступ с верху */
+	z-index: -1;
+}
+
+.main-header {
+	height: 100vh;
+}
+
+.container {
+	padding: 0 7vw;
+}
+
+/* Редактируем текст с классом main-title */
+.main-title {
+	font-size: calc(var(--index) * 8);
+	position: absolute;
+	width: min-content;
+	bottom: 12vh;
+	line-height: .9; /* Расстояние между строк */
+}
+
+.gallery {
+	display: flex;
+	padding: calc(var(--index) * 10) 0; /* Отступ сверху */
+}
+
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center; /* Центрирование блоков которые находятся внутри левой и правой голлереи */
+	flex-direction: column;
+}
+
+/* Стилизация items */
+.gallery__item {
+	max-width: calc(var(--index) * 21);
+	margin-bottom: var(--gallery-gap); /* вертикальное расстояние */
+	max-height: 180vh; /* ограничение максимальной высоты */
+	border-radius: 8px;/* скругляем изображения */
+}
+
+.gallery__left {
+	margin-top: calc(var(--gallery-gap) * 1.75);
+}
+
+/* Инверсия отступов */
+.gallery__right .gallery__item {
+	margin: 0;
+	margin-top: var(--gallery-gap); /* Отступ сверху */
+}
+
+/* Стилизация текста */
+.text-block {
+	color: var(--color-text); /* цвет текста во всем блоке "text-block" */
+	position: relative;
+}
+
+.text-block__h {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	color: var(--color-header);
+	margin-bottom: 1.5rem;
+}
+
+.text-block__p {
+	line-height: 1.75; /* Межстрочный интервал */
+}

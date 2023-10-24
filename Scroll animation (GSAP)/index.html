@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+	<!-- Подключение библиотек -->
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script> <!-- С помощью этого плагина работает анимация -->
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script> <!-- Плагин необходим для плавного скрола -->
+
+	<link rel="stylesheet" href="css/main.css"> <!-- Подключение стилей css -->
+	<script src="js/app.js" defer></script> <!-- Подключение скриптов js -->
+</head>
+<body>
+	
+	<div class="wrapper">
+		<div class="content">
+			<header class="hero-section">
+				<!-- data-speed=".6" - это скорость движения эффекта -->
+				<img data-speed=".6" class="hero" src="img/hero.png" alt="alt"> <!-- Изображение -->
+			</header>
+		
+			<div class="container">
+				<!-- Главный заголовок -->
+				<div data-speed=".75" class="main-header">
+					<h1 class="main-title">creative scroll</h1>
+				</div>
+			</div>
+		
+			<div class="portfolio">
+				<div class="container">
+					<main class="gallery">
+						<!-- Левая часть галлерии -->
+						<div data-speed=".9" class="gallery__left">
+
+							<img class="gallery__item" src="img/work/1.jpg" alt="">
+							<img class="gallery__item" src="img/work/2.jpg" alt="">
+							<!-- Текстовый блок -->
+							<div class="text-block gallery__item">
+								<h2 class="text-block__h">Creative floating scroll with ammazing parallax effect</h2>
+								<p class="text-block__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident vel ab consequuntur dolorum blanditiis natus quos reprehenderit nisi adipisci atque, sit, nam ratione exercitationem ex cumque hic voluptatum velit nobis.</p>
+							</div>
+		
+							<img class="gallery__item" src="img/work/6.jpg" alt="">
+		
+						</div>
+		
+						<div data-speed="1.1" class="gallery__right">
+							<!-- Текстовый блок -->
+							<div class="text-block gallery__item">
+								<h2 class="text-block__h">Creative floating scroll with ammazing parallax effect</h2>
+								<p class="text-block__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident vel ab consequuntur dolorum blanditiis natus quos reprehenderit nisi adipisci atque, sit, nam ratione exercitationem ex cumque hic voluptatum velit nobis.</p>
+							</div>
+		
+							<img class="gallery__item" src="img/work/4.jpg" alt="">
+							<img class="gallery__item" src="img/work/5.jpg" alt="">
+							<img class="gallery__item" src="img/work/3.jpg" alt="">
+		
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
