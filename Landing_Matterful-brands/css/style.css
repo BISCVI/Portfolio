@@ -1,0 +1,173 @@
+/* Подключение шрифтов */
+
+/* Основной шрифт */
+@font-face {
+	font-family: 'Montserrat'; /* Название шрифта */
+	src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+	font-weight: 400; /* Устанавливает насыщенность шрифта. */
+	font-style: normal; /* Определяет начертание шрифта — обычное, курсивное или наклонное. */
+	font-display: swap; /* Определяет то, как шрифт, подключённый через font face будет отображаться в зависимости от того, загрузился ли он и готов ли к использованию. */
+}
+/* Шрифт заголовков */
+@font-face {
+	font-family: 'PlayfairDisplay'; /* Название шрифта */
+	src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2');
+	font-weight: 700; /* Устанавливает насыщенность шрифта. */
+	font-style: normal; /* Определяет начертание шрифта — обычное, курсивное или наклонное. */
+	font-display: swap; /* Определяет то, как шрифт, подключённый через font face будет отображаться в зависимости от того, загрузился ли он и готов ли к использованию. */
+}
+
+/* Нормализация блочной модели */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*  */
+
+/* Убираем внутренние отступы слева тегам списков, у которых есть атрибут class */
+:where(ul, ol):where([class]) {
+	padding-left: 0; /* Устанавливает значение поля от левого края содержимого элемента. */
+}
+/*  */
+
+/* Убираем внешние отступы body и двум другим тегам, у которых есть атрибут class */
+body,
+:where(blockquote, figure):where([class]) {
+	margin: 0;
+}
+/*  */
+
+/* Убираем внешние отступы вертикали нужным тегам, у которых есть атрибут class */
+:where(
+	h1, h2, h3, h4, h5, h6, p, ul, ol, dl
+):where([class]) {
+	margin-block: 0;
+}
+
+:where(dd[class]) {
+	margin-left: 0; /* Устанавливает величину отступа от левого края элемента. */
+}
+/*  */
+
+/* Убираем стандартный маркер маркированному списку, у которого есть атрибут class */
+:where(ul[class]) {
+	list-style: none; /* Универсальное свойство, позволяющее одновременно задать стиль маркера, его положение, а также изображение, которое будет использоваться в качестве маркера списка. */
+}
+/*  */
+
+/* Упрощаем работу с изображениями */
+img {
+	display: block; /* Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе. */
+	max-width: 100%; /* Устанавливает максимальную ширину элемента. */
+}
+/*  */
+
+/* Наследуем свойства шрифта для полей ввода */
+input, textarea, select, button {
+	font: inherit; /* Универсальное свойство, которое позволяет одновременно задать несколько характеристик шрифта и текста. */
+}
+
+html {
+	height: 100%; /* Пригодится в большинстве ситуаций (когда, например, нужно будет "прижать" футер к низу сайта) */
+	scroll-behavior: smooth; /* Плавный скролл */
+}
+
+body {
+	min-height: 100%; /* Пригодится в большинстве ситуаций (когда, например, нужно будет "прижать" футер к низу сайта) */
+	line-height: 1.5; /* Для блочных элементов определяет минимальную высоту строки текста. */
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Глобальные переменные */
+:root {
+	--color-dark: #000;
+	--color-light: #fff;
+	--color-light-gray: #eee;
+	--color-gray: #888;
+
+	--font-family-base: 'Montserrat', sans-serif; /* Основной шрифт */
+	--font-family-accent: 'PlayfairDisplay', sans-serif; /* Шрифт заголовков */
+
+	--container-width: 1200px; /* Ширина основных контейнеров */
+	--container-padding-x: 15px;
+
+	--transition-duration: .2s;
+
+	--border: 1px solid #000;
+
+	--header-height: 90px;
+}
+
+h3 {
+	font-family: 'PlayfairDisplay', sans-serif;
+	font-size: 36px;
+	margin: 0;
+}
+
+/* Определяем глобальные стили */
+body {
+	font-family: var(--font-family-base); /* Устанавливает семейство шрифта, которое будет использоваться для оформления текста содержимого. */
+	font-weight: 400px; /* Устанавливает насыщенность шрифта. */
+	font-size: 16px; /* Определяет размер шрифта элемента.  */
+	line-height: 1.5; /* Для блочных элементов определяет минимальную высоту строки текста. */
+	color: var(--color-dark); /* Определяет цвет текста элемента. */
+	background-color: var(--color-light-gray); /* Определяет цвет фона элемента.  */
+}
+
+/* Стили утилитарного класса container */
+.container {
+	max-width: calc(var(--container-width) + var(--container-padding-x) * 2); /* Устанавливает максимальную ширину элемента. */
+	margin-inline: auto;
+	padding-inline: var(--container-padding-x); /* Универсальное свойство, которое одновременно задаёт начальный и конечный внутренние отступы элемента по строчной оси. */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700; /* Устанавливает насыщенность шрифта.  */
+	/* text-transform: uppercase;  Управляет преобразованием текста элемента в заглавные или прописные символы. */
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* HEADER START */
+.header {
+	display: flex;
+	justify-content: center;
+}
+
+.header-logo {
+	display: flex;
+	width: clamp(470px, 37.5vw, 770px);
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+	gap: 14px; /* Устанавливает промежутки между строками и столбцами сетки. */
+
+}
+
+.header-title {
+	color: var(--color-dark);
+	text-align: center;
+	font-family: var(--font-family-base);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 30px;
+	
+}
+/* HEADER END */
+
