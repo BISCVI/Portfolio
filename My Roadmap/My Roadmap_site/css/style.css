@@ -6,12 +6,14 @@
 
 a {
 	text-decoration: none;
-
+	color: #f3f3f3;
 }
 
 h2 {
 	font-size: 2rem;
 }
+
+svg *[stroke] {stroke: currentColor}
 
 .icon {
 	width: clamp(25px, 2.3vw, 40px);
@@ -22,10 +24,7 @@ body {
 }
 
 .container {
-	margin-inline: auto;
-	max-width: calc(1220px + 15px * 2);
-	padding-inline: 15px;
-	width: 100%;
+	margin-inline: 3vw;
 }
 
 .header {
@@ -47,9 +46,14 @@ body {
 	align-items: center;
 }
 
+.header__logo:hover svg path {
+	fill: #bbb502;
+}
+
 .header__logo--size {
 	padding-top: 8px;
-	width: 240px;
+	width: 260px;
+	width: 19vw;
 }
 
 .search-box {
@@ -68,9 +72,12 @@ body {
 	align-items: center;
 }
 
+.search-btn:hover svg path {
+	fill: #bbb502;
+}
+
 .search-btn__icon {
 	width: 30px;
-	
 }
 
 .search__text {
@@ -89,6 +96,11 @@ body {
 	gap: 30px;
 	list-style: none;
 }
+
+.header-menu__item:hover svg path {
+	fill: #bbb502;
+}
+
 
 /* MAIN START */
 
@@ -128,21 +140,73 @@ body {
 	transition: .2s;
 }
 
+.button:hover svg path {
+	fill: #2b2b2b;
+	transition: .2s;
+}
+
 .icon__arrow--size {
 	width: 30px;
 	margin-right: 10px;
 }
-
-.icon--hover:hover {
-	/* background-color: #373636; */
-}
-
-
 
 .icon__buld--size {
 	width: 20px;
 	margin-right: 10px;
 }
 
+.main__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 25px 20px;
+	border: 1px solid black;
+	margin-top: 50px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #B1B1B1;
+	border-radius: 15px;
+}
+
+.card__title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #373636;
+	text-align: center;
+	height: 40px;
+}
+
+.card__title--top {
+	border-radius: 15px 15px 0 0;
+}
+
+.card__title--bottom {
+	border-radius: 0 0 15px 15px;
+
+}
+
+.circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	border: 10px solid #D9D9D9;
+	border-radius: 50%;
+	height: 150px;
+	font-size: 3rem;
+	margin: 15px;
+}
+
 /* MAIN END*/
 
+/*FOOTER START*/
+footer {
+	background-color: #2A2A2A;
+	margin-top: 50px;
+}
+/*FOOTER END*/
