@@ -1,0 +1,131 @@
+@font-face {
+	font-family: "Muller";
+	src: url(../fonts/Muller-Trial-Regular.woff2) format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Muller";
+	src: url(../fonts/Muller-Trial-Medium.woff2) format("woff2");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Muller";
+	src: url(../fonts/Muller-Trial-Bold.woff2) format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Muller";
+	background-color: #0A0A09;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+.button {
+	padding: 20px 50px;
+	border-radius: 30px;
+	font-weight: 500;
+	font-size: 24px;
+	text-align: center;
+	color: #000;
+}
+
+.button:hover {
+	background-image: linear-gradient(90deg, #5CBDB3, #fff);
+	box-shadow: 0 0 18px #5CBDB3;
+}
+
+
+header {
+	display: flex;
+	justify-content: space-around;
+	align-items: end;
+}
+
+.logo {
+	width: 95px;
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	padding: 14px 0;
+	gap: clamp(0.6rem, -1.989rem + 8vw, 9rem);
+}
+
+.nav__items a {
+	color: #ffffff66;
+	font-size: 18px;
+	font-weight: 400;
+	transition-duration: .3s;
+	padding: 10px;
+}
+
+.nav__items a:hover {
+	color: #5CBDB3;
+	text-shadow: 0 0 15px #5CBDB3;
+}
+
+.numb {
+	color: #fff;
+	font-family: 'Arial';
+	font-size: 18px;
+	padding: 14px 0;
+	transition-duration: .3s;
+}
+
+.numb:hover {
+	color: #58cfc3;
+	text-shadow: 0 0 15px #5CBDB3;
+}
+
+.header-section__fon {
+	position: absolute;
+	width: 80vw;
+	margin-inline: 5vw;
+	z-index: -1;
+}
+
+.header-section__car {
+	position: absolute;
+	width: 61.6vw;
+	right: 0;
+	margin-top: 11.7vw;
+	filter: drop-shadow(0 0 100px #5CBDB3);
+}
+
+/* .header-article a {
+	transition-duration: .3s;
+} */
+
+.header-article__btn {
+	background-image: linear-gradient(270deg, #FFF, #DBB500);
+	box-shadow: 0 0 18px #DBB500;
+}
+
+
+
+@media (max-width: 1000px) {
+	.nav {
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+	}
+}
