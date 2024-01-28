@@ -46,7 +46,7 @@ a {
 }
 
 .button {
-	padding: 20px 50px;
+	padding: 15px 50px;
 	border-radius: 30px;
 	font-weight: 500;
 	font-size: 24px;
@@ -117,13 +117,9 @@ header {
 	margin-left: 7vw;
 }
 
-.header-article p:nth-child(4) {
-	margin-bottom: clamp(0.5rem, -0.409rem + 4.55vw, 3rem);
-}
 
 .header-article p {
 	font-size: clamp(0.5rem, -0.045rem + 2.5vw, 2rem);
-	
 }
 
 .header-section__fon {
@@ -143,9 +139,63 @@ header {
 }
 
 .header-article__btn {
+	display: inline-block;
 	background-image: linear-gradient(270deg, #FFF, #DBB500);
 	box-shadow: 0 0 18px #DBB500;
+	/* transition-duration: .3s; */
 }
+
+@keyframes loading-circle {
+	100% {
+		rotate: 360deg;
+	}
+}
+
+.loading-circle {
+	display: block;
+	position: relative;
+	margin-inline: auto;
+	margin-top: 17.3vw;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+
+	animation-name: loading-circle;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.loading-circle::before,
+.loading-circle::after {
+	content: '';
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	animation-iteration-count: infinite;
+	
+}
+
+
+.loading-circle::before {
+	border: 3px solid #262626;
+	clip-path: inset(0 50% 0 0);
+}
+
+.loading-circle::after {
+	border: 3px solid #fff;
+	clip-path: inset(0 0 0 50%);
+}
+
+
+
+
+
+
+
+
+
 
 
 
