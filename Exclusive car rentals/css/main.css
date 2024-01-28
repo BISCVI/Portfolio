@@ -30,8 +30,15 @@
 
 body {
 	font-family: "Muller";
+	font-weight: 500;
 	background-color: #0A0A09;
 	color: #fff;
+}
+
+h1 {
+	font-size: clamp(1rem, -0.091rem + 5.45vw, 4rem);
+	font-weight: 700;
+	font-style: italic;
 }
 
 a {
@@ -70,6 +77,14 @@ header {
 	gap: clamp(0.6rem, -1.989rem + 8vw, 9rem);
 }
 
+.nav__items {
+	transition-duration: .3s;
+}
+
+.nav__items:hover {
+	transform: scale(1.2);
+}
+
 .nav__items a {
 	color: #ffffff66;
 	font-size: 18px;
@@ -89,11 +104,26 @@ header {
 	font-size: 18px;
 	padding: 14px 0;
 	transition-duration: .3s;
+	
 }
 
 .numb:hover {
 	color: #58cfc3;
 	text-shadow: 0 0 15px #5CBDB3;
+	transform: scale(1.2);
+}
+
+.header-article {
+	margin-left: 7vw;
+}
+
+.header-article p:nth-child(4) {
+	margin-bottom: clamp(0.5rem, -0.409rem + 4.55vw, 3rem);
+}
+
+.header-article p {
+	font-size: clamp(0.5rem, -0.045rem + 2.5vw, 2rem);
+	
 }
 
 .header-section__fon {
@@ -109,11 +139,8 @@ header {
 	right: 0;
 	margin-top: 11.7vw;
 	filter: drop-shadow(0 0 100px #5CBDB3);
+	z-index: -1;
 }
-
-/* .header-article a {
-	transition-duration: .3s;
-} */
 
 .header-article__btn {
 	background-image: linear-gradient(270deg, #FFF, #DBB500);
@@ -128,4 +155,19 @@ header {
 		align-items: center;
 		gap: 5px;
 	}
+
+	.button {
+		padding: 15px 35px;
+		border-radius: 30px;
+		font-size: 20px;
+	}
 }
+
+/* @media (max-width: 600px) {
+
+	.button {
+		padding: 15px 35px;
+		border-radius: 30px;
+		font-size: 20px;
+	}
+} */
