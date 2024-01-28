@@ -30,7 +30,7 @@
 
 body {
 	font-family: "Muller";
-	font-weight: 500;
+	font-weight: 400;
 	background-color: #0A0A09;
 	color: #fff;
 }
@@ -46,17 +46,25 @@ a {
 }
 
 .button {
+	display: inline-block;
 	padding: 15px 50px;
 	border-radius: 30px;
 	font-weight: 500;
 	font-size: 24px;
 	text-align: center;
 	color: #000;
+	transition-duration: .3s;
 }
 
 .button:hover {
 	background-image: linear-gradient(90deg, #5CBDB3, #fff);
 	box-shadow: 0 0 18px #5CBDB3;
+	border: none;
+	color: #000;
+}
+
+.span--color {
+	color: #D4CC7B;
 }
 
 
@@ -139,7 +147,6 @@ header {
 }
 
 .header-article__btn {
-	display: inline-block;
 	background-image: linear-gradient(270deg, #FFF, #DBB500);
 	box-shadow: 0 0 18px #DBB500;
 	/* transition-duration: .3s; */
@@ -173,10 +180,7 @@ header {
 	width: 38px;
 	height: 38px;
 	border-radius: 50%;
-	animation-iteration-count: infinite;
-	
 }
-
 
 .loading-circle::before {
 	border: 3px solid #262626;
@@ -187,6 +191,46 @@ header {
 	border: 3px solid #fff;
 	clip-path: inset(0 0 0 50%);
 }
+
+/* MAIN START */
+
+.content h2 {
+	text-align: center;
+	font-size: 48px;
+	font-style: italic;
+}
+
+.main-section {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+
+.product-card {
+	background-color: #0B0D0F;
+	border-radius: 10px;
+}
+
+.product-card__title {
+	text-align: center;
+	font-weight: 400;
+}
+
+.product-card__characteristics {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 24px 0;
+	
+}
+
+.product-card__button {
+	border: 1px solid #ECD774;
+	box-shadow: 0px 0px 5px 0px #D6A500;
+	color: #fff;
+}
+
+/* MAIN END */
 
 
 
