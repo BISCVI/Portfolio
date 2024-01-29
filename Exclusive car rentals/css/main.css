@@ -47,9 +47,9 @@ a {
 
 .button {
 	display: inline-block;
-	padding: 15px 50px;
+	padding: 10px 30px;
 	border-radius: 30px;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 24px;
 	text-align: center;
 	color: #000;
@@ -149,7 +149,8 @@ header {
 .header-article__btn {
 	background-image: linear-gradient(270deg, #FFF, #DBB500);
 	box-shadow: 0 0 18px #DBB500;
-	/* transition-duration: .3s; */
+	padding: 15px 50px;
+	font-weight: 500;
 }
 
 @keyframes loading-circle {
@@ -194,40 +195,109 @@ header {
 
 /* MAIN START */
 
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .content h2 {
-	text-align: center;
 	font-size: 48px;
 	font-style: italic;
 }
 
 .main-section {
+	max-width: 1480px;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 25vw);
 	grid-template-rows: repeat(4, 1fr);
+	gap: 4vw;
+	
 }
 
 .product-card {
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-color: #0B0D0F;
 	border-radius: 10px;
+	box-shadow: -1px 1px 3px #ffffff5e;
+	padding: 16px 10px 20px;
+}
+
+.product-card p {
+	font-family: 'Areal';
+	font-weight: 700;
+	font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+}
+
+.product-card__header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 14px;
 }
 
 .product-card__title {
-	text-align: center;
 	font-weight: 400;
+	font-size: 1.5rem;
 }
 
 .product-card__characteristics {
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
 	margin: 24px 0;
-	
+	gap: 2vw;
+}
+
+.product-card__characteristics img {
+	max-width: 100%;
+}
+
+.product-card__characteristics img:nth-child(1){
+	margin-inline: auto;
+}
+.product-card__characteristics p {
+	font-size: 1rem;
+	text-align: center;
+	padding: 5px;
+	color: #B3B5B7;
 }
 
 .product-card__button {
 	border: 1px solid #ECD774;
 	box-shadow: 0px 0px 5px 0px #D6A500;
 	color: #fff;
+}
+
+.main-section__fon {
+	position: absolute;
+}
+
+.main-section__fon--bmv {
+	top: 1220px;
+	left: 0;
+	z-index: -1;
+}
+
+.main-section__fon--mercedes {
+	top: 1870px;
+	right: 0;
+	z-index: -1;
+}
+
+.main-section__fon--kia {
+	top: 2141px;
+	left: 0;
+	z-index: -1;
+}
+
+.main-section__fon--volkswagen {
+	top: 3147px;
+	right: 421px;
+	z-index: -1;
 }
 
 /* MAIN END */
