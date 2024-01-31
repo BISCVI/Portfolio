@@ -357,16 +357,67 @@ header {
 /* RENTAL CONDITIONS END */
 
 /* RENT A CAR START*/
+.rent-car__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #050C14;
+	border: 1px solid #888;
+	border-radius: 15px;
+	margin: 90px auto;
+	padding: 0 90px 60px;
+}
 
 .rent-car__form {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(4, 1fr);
+	gap: 20px 80px;
+}
+
+.grid-strech {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.rental-conditions__button--size {
+	padding: 5px 50px;
 }
 
 /* RENT A CAR END*/
 
+.feedback__wrap {
+	display: flex;
+	margin: 24px 0;
+	gap: 4vw;
+}
 
+.slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.slider-item {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: rgba(196, 196, 196, 40%);
+	border-radius: 50%;
+}
+
+.slider__active {
+	background-color: rgba(196, 196, 196);
+}
+
+.feedback__fon-car {
+	position: absolute;
+	top: 70px;
+	right: 0;
+	z-index: -1;
+}
 
 
 

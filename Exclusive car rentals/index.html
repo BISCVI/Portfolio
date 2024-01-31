@@ -337,20 +337,22 @@
 	</section>
 
 	<section class="rental rent-car">
-		<div class="content rent-car__wrapper">
-		<h2><span class="span--color">Аренда автомобиля</span></h2>
-
-		<form class="rent-car__form" action="">
-			<input type="text" placeholder="Машина">
-			<input type="text" placeholder="Дата получения">
-			<input type="text" placeholder="Дата возврата">
-			<input type="text" placeholder="Время получения">
-			<input type="text" placeholder="Время возврата">
-			<input type="text" placeholder="Место получения">
-			<input type="text" placeholder="Место возврата">
-		</form>
+		<div class="content">
+			<div class="rent-car__wrapper">
+				<h2><span class="span--color">Аренда автомобиля</span></h2>
+				
+				<form class="rent-car__form" action="">
+				<input type="text" placeholder="Машина" class="grid-strech">
+				<input type="text" placeholder="Дата получения">
+				<input type="text" placeholder="Дата возврата">
+				<input type="text" placeholder="Время получения">
+				<input type="text" placeholder="Время возврата">
+				<input type="text" placeholder="Место получения">
+				<input type="text" placeholder="Место возврата">
+			</form>
 		
-		<a href="#" class="button rental-conditions__button">Далее</a>
+			<a href="#" class="button rental-conditions__button rental-conditions__button--size">Далее</a>
+		</div>
 		
 		<div class="rental__vignette"></div>
 	</div>
@@ -358,8 +360,42 @@
 	<div class="rental__linear-gradient"></div>
 	</section>
 
-	<footer class="footer">
+	<section class="rental rental-conditions">
+		<div class="content ">
+		<h2><span class="span--color">Отзывы</span></h2>
+		<ul class="product-card-wrap feedback__wrap">
+			<li>
+				<img src="./images/Feedback-WhatSapp1.png" alt="Паспорт">
+			</li>
+			<li>
+				<img src="./images/Feedback-WhatSapp2.png" alt="Водительское удостоверение">
+			</li>
+			<li>
+				<img src="./images/Feedback-WhatSapp3.png" alt="Возраст от 22 лет">
+			</li>
+		</ul>
+		<div class="slider">
+			<span class="slider-item slider__active"></span>
+			<span class="slider-item"></span>
+			<span class="slider-item"></span>
+		</div>
+		
+		<div class="rental__vignette"></div>
+	</div>
+	<img src="./images/bottom-main-car2.png" alt="" class="feedback__fon-car">
+	</section>
 
+	<footer class="footer">
+		<div class="footer__info">
+			<img src="./images/footer-logo.png" alt="">
+			<p>Мы являемся лидерами аренды эксклюзивных автомобилей в Крыму</p>
+			<p>Индивидуальный предприниматель
+				Белоножко Сергей Александрович
+				ИНН 910312245536
+				ОГРНИП 320911200093781</p>
+		</div>
+		<div class="footer__adres"></div>
+		<div class="footer__social-media"></div>
 	</footer>
 </body>
 </html>
