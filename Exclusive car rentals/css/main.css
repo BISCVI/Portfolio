@@ -419,6 +419,49 @@ header {
 	z-index: -1;
 }
 
+/* FOOTER START */
+
+.footer {
+	margin-top: 300px;
+	background-color: #000;
+}
+
+.footer-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-inline: 10%;
+	padding-block: 5%;
+}
+
+.footer-wrapper a {
+	color: #fff;
+}
+
+.footer-info {
+	margin-right: 5%;
+}
+
+.footer-info p {
+	margin-top: 24px;
+}
+
+.footer-adres {
+	width: 50%;
+}
+
+.footer-social-media {
+	text-align: center;
+}
+
+.footer-social-media__flex {
+	display: flex;
+	justify-content: space-around;
+	margin-block: 30px;
+}
+
+
+/* FOOTER END */
 
 
 
